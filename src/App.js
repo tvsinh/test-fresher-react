@@ -1,24 +1,20 @@
-import logo from './logo.svg';
+import AnimalFeature from 'features/Animal';
+import Login from 'features/Auth/components/Login';
+import { Redirect, Route, Switch } from 'react-router';
 import './App.css';
 
-function App() {
+function App({ Component, pageProps }) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Switch>
+        <Redirect from="/" to="/login" exact />
+        <Route path="/login" component={Login} />
+        <Route path="/animal" component={AnimalFeature} />
+      </Switch>
     </div>
+    // <AuthContext.Provider value={accessToken}>
+    //   <Component {...pageProps} />
+    // </AuthContext.Provider>
   );
 }
 
