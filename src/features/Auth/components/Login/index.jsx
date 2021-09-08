@@ -13,7 +13,7 @@ function Login(props) {
   const history = useHistory();
   const handleSubmit = async (values) => {
     try {
-      const resultAction = await dispatch(login(values));
+      const resultAction = dispatch(login(values));
       unwrapResult(resultAction);
       // console.log('resultAction:', resultAction);
       history.push('/animal');

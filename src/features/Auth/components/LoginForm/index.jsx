@@ -36,7 +36,7 @@ function LoginForm(props) {
     }
   };
   return (
-    <div>
+    <div className="root">
       <form onSubmit={form.handleSubmit(handleSubmit)} className="login">
         <div className="login-field">
           <i className="fa fa-envelope login-icon"></i>

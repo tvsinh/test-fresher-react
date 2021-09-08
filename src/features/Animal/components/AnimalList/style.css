@@ -1,0 +1,24 @@
+:root{
+  --spacing: 20px;
+  --column: 4;
+}
+
+.animal-list{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--spacing));
+}
+
+.animals{
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: var(--spacing);
+  margin-bottom: var(--spacing);
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+  width: calc(calc(100% / var(--column)) - var(--spacing));
+  transition: all 0.5s;
+}
+.animals:hover{
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, .2);
+}

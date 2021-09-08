@@ -1,0 +1,52 @@
+
+.header-root{
+  background-color: var(--main-color);
+  box-shadow: 0px 2px 4px -1px rgb(0, 0, 0, 0.2), 0px 4px 5px 0px rgb(0, 0, 0, 0.14), 0px 1px 10px 0px rgb(0, 0, 0, 0.12);
+}
+.header-item{
+  display: flex;
+  height: 80px;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+}
+.header-right{
+  display: flex;
+}
+
+.header-logo{
+  position: relative;
+  width: 100%;
+  height: 70px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.header-left{
+  display: flex;
+ 
+}
+.header-input{
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 20px;
+}
+.header-logged{
+  height: 20px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header-logged-in{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.25;
+  margin-left: 30px;
+  color: white;
+}

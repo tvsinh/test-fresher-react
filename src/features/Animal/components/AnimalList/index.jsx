@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Animal from './Animal';
+import Animal from '../Animal';
+import './style.css';
 
 AnimalList.propTypes = {
   animalsList: PropTypes.array,
@@ -8,9 +9,9 @@ AnimalList.propTypes = {
 
 function AnimalList({ animalsList = [] }) {
   return (
-    <div>
+    <div className="animal-list">
       {animalsList.map((animal) => (
-        <div key={animal.id} style={{ display: 'flex' }}>
+        <div key={animal.id} className="animals">
           <Animal animal={animal} />
         </div>
       ))}

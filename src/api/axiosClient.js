@@ -1,10 +1,9 @@
-import axios from "axios";
+import axios from 'axios';
 
 const axiosClient = axios.create({
-  baseURL: "https://api.petfinder.com/v2/",
+  baseURL: 'https://api.petfinder.com/v2/',
   headers: {
-    "Content-Type": "application/json",
-    // "X-API-Key": "v3YvEB7MQAmosLDjPHKa3LWyfEikMU5GVzZqNLF77lFP2hsKuQ",
+    'Content-Type': 'application/json',
   },
 });
 

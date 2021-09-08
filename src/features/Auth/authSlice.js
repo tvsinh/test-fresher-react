@@ -4,7 +4,6 @@ import StorageKeys from 'Constants/storage-keys';
 
 export const login = createAsyncThunk('auth/login', async (payload) => {
   const data = await oauthApi.login(payload);
-
   localStorage.setItem(StorageKeys.TOKEN, data.access_token);
   // console.log('authSlice', data);
   return data;
@@ -13,11 +12,11 @@ export const login = createAsyncThunk('auth/login', async (payload) => {
 const authSlice = createSlice({
   name: 'auth',
   initialState: {
-    current: false,
+    // current: false,
+    current: localStorage.getItem(StorageKeys.TOKEN) || false,
   },
   reducers: {
     logout(state) {
-      // clear local storage
       localStorage.removeItem(StorageKeys.TOKEN);
       state.current = false;
     },
