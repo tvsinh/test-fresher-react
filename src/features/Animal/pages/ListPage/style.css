@@ -3,7 +3,7 @@
 
 }
 .background{
-  height: 400px;
+  height: 450px;
   width: 100%;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px;
   position: relative;
@@ -29,7 +29,7 @@
 .content-title{
   font-size: 5rem;
   font-family: BerlinSansFBDemiBold,sans-serif;
-  color: #fff;
+  color: rgb(255, 255, 255);
   text-transform: capitalize;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 2px;
@@ -67,11 +67,11 @@
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 12px;
 }
 
-
 .list-page {
   max-width: 1280px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
+  margin-bottom: 30px;
 }

@@ -1,14 +1,9 @@
-.login-input {
+.input {
   border: 0;
   padding-left: 15px;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.15);
   outline: none;
   width: 100%;
-  font-size: 1.2rem;
-}
-.login-input::-webkit-input-placeholder {
-  color: #90a8cc;
-}
-.login-input::-moz-input-placeholder {
-  color: #90a8cc;
+  font-size: 1.8rem;
+  /* height: 30px; */
 }

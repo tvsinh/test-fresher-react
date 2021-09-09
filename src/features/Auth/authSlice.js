@@ -12,18 +12,22 @@ export const login = createAsyncThunk('auth/login', async (payload) => {
 const authSlice = createSlice({
   name: 'auth',
   initialState: {
-    // current: false,
-    current: localStorage.getItem(StorageKeys.TOKEN) || false,
+    current: false,
+    // current: localStorage.getItem(StorageKeys.TOKEN) || false,
   },
   reducers: {
     logout(state) {
       localStorage.removeItem(StorageKeys.TOKEN);
       state.current = false;
     },
+    checkLogin(state) {
+      state.current = true;
+    },
   },
   extraReducers: {
     [login.fulfilled]: (state, action) => {
-      state.current = action.payload;
+      // state.current = action.payload;
+      state.current = true;
     },
   },
 });

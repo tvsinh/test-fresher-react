@@ -1,37 +1,17 @@
-// import animalApi from 'api/animalApi';
-// import StorageKeys from 'Constants/storage-keys';
-// import React, { useEffect, useState } from 'react';
-// import { useSelector } from 'react-redux';
-// import { useHistory } from 'react-router';
+import React from 'react';
 
-// DetailPage.propTypes = {};
+DetailPage.propTypes = {};
 
-// function DetailPage(props) {
-//   const history = useHistory();
-//   const [animals, setAnimals] = useState();
-//   const [loading, setLoading] = useState();
-//   const isLogin = useSelector((state) => state.auth.current);
-//   useEffect(() => {
-//     if (!isLogin) {
-//       history.push('/login');
-//       localStorage.removeItem(StorageKeys.TOKEN);
-//     }
-//     (async () => {
-//       try {
-//         const animalsList = await animalApi.getAnimals();
-//         setAnimals(animalsList);
-//         console.log('Animals List: ', animalsList);
-//       } catch (error) {
-//         console.log('Failed to fetch todos: ', error);
-//       }
-//       setLoading(false);
-//     })();
-//   }, [history, isLogin]);
-//   return (
-//     <div>
-//       <p>animal list</p>
-//     </div>
-//   );
-// }
+function DetailPage(props) {
+  return (
+    <div>
+      <p>detail page</p>
+      <p>detail page</p>
+      <p>detail page</p>
+      <p>detail page</p>
+      <p>detail page</p>
+    </div>
+  );
+}
 
-// export default DetailPage;
+export default DetailPage;

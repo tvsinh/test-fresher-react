@@ -31,7 +31,7 @@ function InputField({ form, name, type, label, placeholder, disabled }) {
           onChange={onChange}
           onBlur={onBlur}
           placeholder={placeholder}
-          className="login-input"
+          className="input"
         />
         // error={hasError}
         // <p>{errors[name]?.message}</p>

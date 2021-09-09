@@ -1,21 +1,23 @@
 import React from 'react';
 import './style.css';
 import { useHistory } from 'react-router';
-import StorageKeys from 'Constants/storage-keys';
 import { BiSearchAlt } from 'react-icons/bi';
 import { IoIosArrowDown } from 'react-icons/io';
 import { FaCheck } from 'react-icons/fa';
 import { FaRegUser } from 'react-icons/fa';
 import { AiFillCaretDown } from 'react-icons/ai';
+import { useDispatch } from 'react-redux';
+import { logout } from 'features/Auth/authSlice';
 
 Header.propTypes = {};
 
 function Header(props) {
   const history = useHistory();
+  const dispatch = useDispatch();
 
   const handleLogOut = () => {
+    dispatch(logout());
     history.push('/login');
-    localStorage.removeItem(StorageKeys.TOKEN);
   };
   const handleHome = () => {
     history.push('/animal');
@@ -49,9 +51,9 @@ function Header(props) {
               </li>
             </ul>
           </div>
-          <buuton className="search-btn">
+          <button className="search-btn">
             <BiSearchAlt className="search-btn-icon " />
-          </buuton>
+          </button>
         </div>
         <div className="header-logged">
           <FaRegUser className="logged-icon" />

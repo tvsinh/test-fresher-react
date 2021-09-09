@@ -2,15 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { PHOTO_PLACEHOLDER } from 'Constants/common';
 import './style.css';
+import { useHistory } from 'react-router';
 
 Animal.propTypes = {
   animal: PropTypes.object,
 };
 
 function Animal({ animal = {} }) {
+  const history = useHistory();
+  const handleDetailPage = () => {
+    history.push(`animal/${animal.id}`);
+  };
   const photoUrl = animal.photos.length ? animal?.photos[0]?.full : PHOTO_PLACEHOLDER;
   return (
-    <div className="animal">
+    <div className="animal" onClick={handleDetailPage}>
       <div className="animal-img-box">
         <img alt="animalIMG" src={photoUrl} className="animal-img" />
       </div>

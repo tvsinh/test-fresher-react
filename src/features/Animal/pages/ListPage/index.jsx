@@ -3,31 +3,48 @@ import Footer from 'components/Footer';
 import Header from 'components/Header';
 import ScrollTop from 'components/ScrollTop';
 import StorageKeys from 'Constants/storage-keys';
-import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
-import { useHistory } from 'react-router';
+import AnimalSkeletonList from 'features/Animal/components/AnimalSkeletonList';
+import React, { useEffect, useMemo, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory, useLocation } from 'react-router';
 import AnimalList from '../../components/AnimalList';
 import Pagination from '../../components/Pagination';
+import queryString from 'query-string';
+
 import './style.css';
 
 ListPage.propTypes = {};
 
-function ListPage(props) {
+function ListPage() {
   const history = useHistory();
+  const location = useLocation();
   const [animals, setAnimals] = useState();
+
   const [pagination, setPagination] = useState();
-  const [loading, setLoading] = useState();
+  const [loading, setLoading] = useState(true);
   const isLogin = useSelector((state) => state.auth.current);
+  const logedIn = !!isLogin;
+  const paginationDefault = {
+    current_page: 1,
+  };
+
+  const queryParams = useMemo(() => {
+    const params = queryString.parse(location.search);
+    return {
+      ...params,
+      page: Number.parseInt(params.page) || 1,
+    };
+  }, [location.search]);
 
   useEffect(() => {
-    if (!isLogin) {
+    if (!logedIn) {
       history.push('/login');
       localStorage.removeItem(StorageKeys.TOKEN);
     }
-    if (isLogin) {
+    if (logedIn) {
       (async () => {
         try {
-          const Animals = await animalApi.getAnimals();
+          const Animals = await animalApi.getAnimals(queryParams);
           setAnimals(Animals.animals);
           setPagination(Animals.pagination);
           console.log('Animals List: ', Animals);
@@ -37,7 +54,7 @@ function ListPage(props) {
         setLoading(false);
       })();
     }
-  }, [history, isLogin]);
+  }, [history, logedIn, queryParams]);
 
   return (
     <div>
@@ -62,7 +79,10 @@ function ListPage(props) {
       </div>
       <div className="list-page">
         {loading ? (
-          <p>Loading...</p>
+          <div>
+            <AnimalSkeletonList length={20} />
+            <Pagination pagination={paginationDefault} />
+          </div>
         ) : (
           <div>
             <AnimalList animalsList={animals} />

@@ -3,41 +3,50 @@
   box-sizing: border-box;
 }
 
-.root {
+.login-root {
   width: 100vw;
   height: 100vh;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
+  background-image: url(https://lh3.googleusercontent.com/41DH2NRFFVmQytOf8xVRN31z7JRSwbUiqP9MeHXmAkkOCAhq_utGcr1y7_Fe9UzJQwpAfKv_LGfJt-AC-xqWutV9M-PBLNXBxCAyV5W1WWmGjUsY9_qtcFS_DqiAm5BBTlO2wiHa2ZLeL1h4Syzb60p6y9BgCaWKfQq3RQj8oEfHfhA6CazqCkVLMJLzXnQqoIynixDiXMT_VFViA1gBGcgz1q7RQAulir_f0OhXWupBQxygKz13d914y-prDQCBgeHAFfe9TmhsEJanmDgJqXLtaMigJVGwW3x2N_7MnAkSVFeV5UGhx6q2ey80D-z7N9jFehbofAuwNtlzLEYCtmwgfRckzPdk_ZwSXz-C3OYFBbwHuPbAL4eD9497P5iCDifrOGYwriJ3jr8QtEZ7eaXuvbs8FGG4BoZFLotXubfSAqWEpN48ne7IRgy1qn5EeAdboJZEXpRjT_l_6YAeAgOzE22EFmVPGfkuh-Iz4sU8A-cek8ACWuCTnobh7O3GFsOlQNF32QHLaQsqvIsZMDi6iRD8qMFXOt462oUNvUGj55SYxW_pMIesdOJxU-0Qj8KmtCWEYL8rUhuf3JE-WwAAs0ILJ1D6GUeMlGqxpR2Xo0xeVOxdS0TmWyGZIc1B5b6rAUXBy82YS6-szbi2J7x3DIQ4A338950xPMQXhThvRhJP0QmY6vFovMqF1eaPRq6pnyKA18L4nlnT8oC_K2g=w1366-h632-no?authuser=0);
+  background-size: cover;
 }
 
-.login {
+.login{
   position: relative;
-  width: 500px;
-  /* height: 100vh; */
+  top: 8%;
+}
+.logo-shop{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 20px;
+}
+
+.login-form {
+  position: relative;
+  width: 600px;
   margin-left:auto;
   margin-right: auto;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.15);
   border-radius: 20px;
   padding: 30px;
-
-  /* top: 40%;
-  transform: translateY(-50%); */
-
+  box-shadow: -1px 4px 28px 0px rgb(0, 0, 0, 0.5)
 }
 
 .login-field {
   display: flex;
   align-items: center;
   background-color: #f2f7ff;
+  /* background-color: rgba(255, 255, 255, 0.15); */
   padding: 15px;
   border-radius: 10px;
   margin-bottom: 20px;
 }
 
 .login-icon {
-  color: #344667;
-  font-size: 1.6rem;
-  width: 20px;
+  color: var(--hover-color);
+  font-size: 2.8rem;
   text-align: center;
 }
 
@@ -49,11 +58,16 @@
   width: 100%;
   padding: 15px 10px;
   border: 0;
-  background-color: #435ebe;
-  font-size: 1.4rem;
-  font-weight: 500;
+  background-color: #4763c7;
+  font-size: 1.8rem;
+  font-weight: 600;
   font-family: "Poppins", sans-serif;
   cursor: pointer;
   outline: none;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 5px;
+}
+.disabled {
+  background-color: #b1b1b1;
+  cursor: default;
 }
 
