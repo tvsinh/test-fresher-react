@@ -39,8 +39,8 @@ function LoginForm(props) {
   };
 
   let classNameButton = 'login-submit';
-  console.log(isSubmitted);
-  if (isSubmitted) {
+  console.log(isSubmitting);
+  if (isSubmitting) {
     classNameButton += ' disabled';
   }
   return (
@@ -56,7 +56,7 @@ function LoginForm(props) {
               className="login-input"
               placeholder="API Key"
               form={form}
-              required
+              required="required"
             />
           </div>
           <div className="login-field">
@@ -67,7 +67,7 @@ function LoginForm(props) {
               className="login-input"
               placeholder="Secret"
               form={form}
-              required
+              required="required"
             />
           </div>
           <button className={classNameButton} type="submit">

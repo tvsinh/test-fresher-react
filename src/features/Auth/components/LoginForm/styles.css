@@ -21,6 +21,7 @@
   left: 50%;
   transform: translateX(-50%);
   padding-bottom: 20px;
+  width: 550px;
 }
 
 .login-form {
@@ -58,7 +59,7 @@
   width: 100%;
   padding: 15px 10px;
   border: 0;
-  background-color: #4763c7;
+  background-color: var(--hover-color);
   font-size: 1.8rem;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
@@ -66,8 +67,31 @@
   outline: none;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 5px;
 }
+.login-submit:hover {
+  background-color: #0384c0;
+
+}
 .disabled {
   background-color: #b1b1b1;
   cursor: default;
 }
 
+/* Tablet */
+@media (min-width: 46.25em) and (max-width: 75em){
+  .logo-shop{
+    width: 400px;
+  }
+  .login-form {
+    width: 480px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 46.1875em) {
+  .logo-shop{
+    width: 350px;
+  }
+  .login-form {
+    width: 420px;
+  }
+}

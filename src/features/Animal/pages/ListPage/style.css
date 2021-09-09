@@ -75,3 +75,17 @@
   margin-top: 30px;
   margin-bottom: 30px;
 }
+@media (min-width: 46.25em) and (max-width: 82em){
+  .list-page {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 46.1875em) {
+  .list-page {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

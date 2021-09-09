@@ -98,7 +98,15 @@
 
 
 /* Tablet */
-@media (min-width: 46.25em) and (max-width: 63.9375em){
+@media (min-width: 46.25em) and (max-width: 82em){
+  .container{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .footer-contact-container{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
   .footer-body{
     --spacing-footer: 20px;
     --column-footer: 2;
@@ -107,6 +115,14 @@
 
 /* Mobile */
 @media (max-width: 46.1875em) {
+  .container{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .footer-contact-container{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
   .footer-body{
     --spacing-footer: 20px;
     --column-footer: 1;

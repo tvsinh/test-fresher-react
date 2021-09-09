@@ -12,6 +12,7 @@ import Pagination from '../../components/Pagination';
 import queryString from 'query-string';
 
 import './style.css';
+import Loading from 'components/Loading';
 
 ListPage.propTypes = {};
 
@@ -22,6 +23,7 @@ function ListPage() {
 
   const [pagination, setPagination] = useState();
   const [loading, setLoading] = useState(true);
+  const [progress, setProgress] = useState(false);
   const isLogin = useSelector((state) => state.auth.current);
   const logedIn = !!isLogin;
   const paginationDefault = {
@@ -44,6 +46,7 @@ function ListPage() {
     if (logedIn) {
       (async () => {
         try {
+          setProgress(true);
           const Animals = await animalApi.getAnimals(queryParams);
           setAnimals(Animals.animals);
           setPagination(Animals.pagination);
@@ -51,6 +54,7 @@ function ListPage() {
         } catch (error) {
           console.log('Failed to fetch Animals List: ', error);
         }
+        setProgress(false);
         setLoading(false);
       })();
     }
@@ -58,6 +62,11 @@ function ListPage() {
 
   return (
     <div>
+      {progress && (
+        <div className="overlay">
+          <Loading />
+        </div>
+      )}
       <Header className="header" />
       <ScrollTop showBelow={400} />
       <div className="background">

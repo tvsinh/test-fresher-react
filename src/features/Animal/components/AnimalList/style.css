@@ -33,7 +33,7 @@
 }
 
 /* Tablet */
-@media (min-width: 46.25em) and (max-width: 63.9375em){
+@media (min-width: 46.25em) and (max-width: 68em){
   .animal-list{
     --spacing: 15px;
     --column: 3;

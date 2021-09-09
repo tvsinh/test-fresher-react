@@ -9,10 +9,11 @@ InputField.propTypes = {
   type: PropTypes.string,
   label: PropTypes.string,
   placeholder: PropTypes.string,
+  required: PropTypes.string,
   disabled: PropTypes.bool,
 };
 
-function InputField({ form, name, type, label, placeholder, disabled }) {
+function InputField({ form, name, type, label, placeholder, required, disabled }) {
   // const {
   //   formState: { errors },
   // } = form;
@@ -32,6 +33,7 @@ function InputField({ form, name, type, label, placeholder, disabled }) {
           onBlur={onBlur}
           placeholder={placeholder}
           className="input"
+          required={required}
         />
         // error={hasError}
         // <p>{errors[name]?.message}</p>
