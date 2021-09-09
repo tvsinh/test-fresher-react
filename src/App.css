@@ -1,0 +1,14 @@
+@font-face {
+  font-family: MyriadProCondensed;
+  src: url(./assets/fonts/MyriadProCondensed/MyriadProCondensed.ttf);
+}
+
+@font-face {
+  font-family: BerlinSansFBDemiBold;
+  src: url(./assets/fonts/BerlinSansFBDemiBold/BerlinSansFBDemiBold.ttf);
+}
+html {
+  background-color: #f1f1f1;
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}

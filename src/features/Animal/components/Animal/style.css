@@ -1,13 +1,12 @@
-:root {
-  --main-color: rgb(26, 148, 255);
-}
+
 .animal{
   cursor: pointer;
+  border: none;
 }
 
 .animal:hover .animal-img{
   transform: scale(1.06);
-  transition: all ease .9s;
+  transition: all ease .7s;
 }
 
 .animal:hover .animal-info,
@@ -27,7 +26,7 @@
 
 .animal:not(:hover) .animal-img{
   transform: scale(1.005);
-  transition: all ease .9s;
+  transition: all ease .7s;
 }
 
 .animal-img-box{
@@ -46,7 +45,7 @@
   z-index: 10;
   padding: 10px 25px 15px;
   position: relative;
-  transition: all ease .9s;
+  transition: all ease .7s;
 }
 .animal-info::before{
   content: "";
@@ -58,10 +57,10 @@
   right: -5px;
   left: -5px;
   background-color: rgb(255, 255, 255);
-  transition: all ease .9s;
+  transition: all ease .7s;
 }
 .animal-name{
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 600;
   color: var(--main-color);
   display:-webkit-box;
@@ -73,7 +72,7 @@
   /* word-break: break-word; */
   text-align: center;
   line-height: 1.25;
-  transition: all ease .9s;
+  transition: all ease .7s;
   transform: translateY(15px);
 }
 
@@ -83,10 +82,10 @@
 }
 
 .animal-detail {
-  font-size: 14px;
+  font-size: 1.6rem;
   line-height: 1.2;
-  font-weight: 600;
+  font-weight: 500;
   color: white;
-  transition: all ease .8s;
+  transition: all ease .7s;
   transform: translateY(50px);
 }

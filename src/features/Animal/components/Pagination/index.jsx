@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './style.css';
 
 Pagination.propTypes = {
   pagination: PropTypes.object,
@@ -8,8 +9,8 @@ Pagination.propTypes = {
 function Pagination({ pagination }) {
   return (
     <div>
-      <p>Pages {pagination?.current_page}</p>
-      <p>Last Pages {pagination?.total_pages}</p>
+      <p className="pagiantion">Pages {pagination?.current_page}</p>
+      <p className="pagiantion">Last Pages {pagination?.total_pages}</p>
     </div>
   );
 }

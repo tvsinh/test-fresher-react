@@ -1,8 +1,77 @@
 
+.header{
+
+}
+.background{
+  height: 400px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px;
+  position: relative;
+  z-index: 1;
+}
+.background-img{
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  
+}
+.background-content-root{
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.background-content{
+  position: absolute;
+  top: 15%;
+}
+.content-title{
+  font-size: 5rem;
+  font-family: BerlinSansFBDemiBold,sans-serif;
+  color: #fff;
+  text-transform: capitalize;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  padding: 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px;
+  border-radius: 2px;
+}
+.content-description{
+  margin-top: 10px;
+  font-size: 3rem;
+  padding: 5px 10px;
+  color: white;
+  font-family: MyriadProCondensed,sans-serif;
+  text-shadow: 0 1px 5px #4d4751, 0 0 2px #4d4751, 0 0 1px #4d4751;
+}
+.content-button{
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 2rem;
+  padding: 5px 10px;
+  width: 140px;
+  height: 45px;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 22px;
+  background-color: var(--main-color);
+  font-family: MyriadProCondensed,sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px;
+  animation: all .7s;
+}
+.content-button:hover{
+  cursor: pointer;
+  background-color: var(--hover-color);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 12px;
+}
+
+
 .list-page {
   max-width: 1280px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
+  margin-top: 30px;
 }

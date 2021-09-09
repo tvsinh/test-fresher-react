@@ -3,9 +3,8 @@
   padding-left: 15px;
   background-color: transparent;
   outline: none;
-  font-family: "Poppins", sans-serif;
   width: 100%;
-  font-size: 12px;
+  font-size: 1.2rem;
 }
 .login-input::-webkit-input-placeholder {
   color: #90a8cc;

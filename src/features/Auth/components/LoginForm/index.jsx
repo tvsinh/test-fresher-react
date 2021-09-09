@@ -5,6 +5,8 @@ import InputField from 'components/form-controls/InputField';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
+import { HiKey } from 'react-icons/hi';
+import { RiLock2Fill } from 'react-icons/ri';
 
 LoginForm.propTypes = {
   onSubmit: PropTypes.func,
@@ -39,7 +41,7 @@ function LoginForm(props) {
     <div className="root">
       <form onSubmit={form.handleSubmit(handleSubmit)} className="login">
         <div className="login-field">
-          <i className="fa fa-envelope login-icon"></i>
+          <RiLock2Fill className="login-icon" />
           <InputField
             type="text"
             name="apiKey"
@@ -50,7 +52,7 @@ function LoginForm(props) {
           />
         </div>
         <div className="login-field">
-          <i className="fa fa-lock login-icon"></i>
+          <HiKey className="login-icon" />
           <InputField
             name="secret"
             type="password"

@@ -30,7 +30,7 @@
   position: absolute;
   top: 12px;
   left: 12px;
-  font-size: 20px;
+  font-size: 2rem;
   --webkit-animation: iconUpDown .5s ease alternate infinite;
   animation: iconUpDown .5s ease infinite alternate;
   transform: scale(1);
