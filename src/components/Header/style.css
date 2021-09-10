@@ -358,7 +358,7 @@
   max-width: 100%;
   background-color: #fff;
   transform: translateX(100%);
-  animation: transform linear 10s;
+  transition: transform .3s linear;
 }
 .input-checkbox:checked ~ .menu-mobile {
   transform: translateX(0%);
@@ -393,6 +393,7 @@
   font-size: 2rem;
   padding: 20px 20px;
   color: var(--main-color);
+  cursor: pointer;
 }
 
 @keyframes fadeIn {
