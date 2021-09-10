@@ -6,6 +6,7 @@ import { IoIosArrowDown } from 'react-icons/io';
 import { FaCheck } from 'react-icons/fa';
 import { FaRegUser } from 'react-icons/fa';
 import { AiFillCaretDown } from 'react-icons/ai';
+import { TiThMenuOutline } from 'react-icons/ti';
 import { useDispatch } from 'react-redux';
 import { logout } from 'features/Auth/authSlice';
 
@@ -74,6 +75,9 @@ function Header(props) {
               </li>
             </ul>
           </div>
+        </div>
+        <div className="nav-mobile">
+          <TiThMenuOutline className="nav-mobile-icon" />
         </div>
       </div>
     </div>

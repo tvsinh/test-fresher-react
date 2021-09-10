@@ -1,0 +1,11 @@
+
+.detail-root {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+.title-detail{
+  text-align: center;
+  font-size: 2rem;
+}

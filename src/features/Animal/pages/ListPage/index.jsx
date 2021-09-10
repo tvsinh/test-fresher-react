@@ -5,7 +5,7 @@ import ScrollTop from 'components/ScrollTop';
 import StorageKeys from 'Constants/storage-keys';
 import AnimalSkeletonList from 'features/Animal/components/AnimalSkeletonList';
 import React, { useEffect, useMemo, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { useHistory, useLocation } from 'react-router';
 import AnimalList from '../../components/AnimalList';
 import Pagination from '../../components/Pagination';

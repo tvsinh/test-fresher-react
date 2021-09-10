@@ -28,7 +28,7 @@ function LoginForm(props) {
   });
 
   const {
-    formState: { isSubmitting, isSubmitted },
+    formState: { isSubmitting },
   } = form;
 
   const handleSubmit = (values) => {
@@ -39,7 +39,6 @@ function LoginForm(props) {
   };
 
   let classNameButton = 'login-submit';
-  console.log(isSubmitting);
   if (isSubmitting) {
     classNameButton += ' disabled';
   }

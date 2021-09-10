@@ -20,13 +20,14 @@ function Login(props) {
       const resultAction = await dispatch(login(values));
       unwrapResult(resultAction);
       // console.log('resultAction:', resultAction);
+      setLoading(false);
       history.push('/animal');
     } catch (error) {
       console.log('Failed to register:', error);
       alert('Invalid ApiKey or secret.');
+      setLoading(false);
       history.push('/login');
     }
-    setLoading(false);
   };
   return (
     <div>

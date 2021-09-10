@@ -20,9 +20,6 @@ const authSlice = createSlice({
       localStorage.removeItem(StorageKeys.TOKEN);
       state.current = false;
     },
-    checkLogin(state) {
-      state.current = true;
-    },
   },
   extraReducers: {
     [login.fulfilled]: (state, action) => {
