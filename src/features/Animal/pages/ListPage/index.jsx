@@ -59,6 +59,9 @@ function ListPage() {
       })();
     }
   }, [history, logedIn, queryParams]);
+  const handleGetNow = () => {
+    window.scrollTo({ top: 550, behavior: 'smooth' });
+  };
 
   return (
     <div>
@@ -82,7 +85,9 @@ function ListPage() {
             <p className="content-description">
               Get a quick look at pet's basic information by focus over it.
             </p>
-            <button className="content-button">GET NOW</button>
+            <button className="content-button" onClick={handleGetNow}>
+              GET NOW
+            </button>
           </div>
         </div>
       </div>

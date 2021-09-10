@@ -25,7 +25,7 @@ function Pagination({ pagination }) {
       pathname: history.location.pathname,
       search: queryString.stringify(pagePrev),
     });
-    window.scrollTo({ top: 550 });
+    window.scrollTo({ top: 550, behavior: 'smooth' });
   };
   const handlePageTotalPage = () => {
     const pagePrev = { page: pagination.total_pages };
@@ -33,7 +33,7 @@ function Pagination({ pagination }) {
       pathname: history.location.pathname,
       search: queryString.stringify(pagePrev),
     });
-    window.scrollTo({ top: 550 });
+    window.scrollTo({ top: 550, behavior: 'smooth' });
   };
   const handlePageNextTwo = () => {
     const pagePrev = { page: queryParams.page + 2 };
@@ -41,7 +41,7 @@ function Pagination({ pagination }) {
       pathname: history.location.pathname,
       search: queryString.stringify(pagePrev),
     });
-    window.scrollTo({ top: 550 });
+    window.scrollTo({ top: 550, behavior: 'smooth' });
   };
   const handlePagePrevTwo = () => {
     const pagePrev = { page: queryParams.page - 2 };
@@ -49,7 +49,7 @@ function Pagination({ pagination }) {
       pathname: history.location.pathname,
       search: queryString.stringify(pagePrev),
     });
-    window.scrollTo({ top: 550 });
+    window.scrollTo({ top: 550, behavior: 'smooth' });
   };
   const handlePagePrev = () => {
     if (queryParams.page > 1) {
@@ -58,7 +58,7 @@ function Pagination({ pagination }) {
         pathname: history.location.pathname,
         search: queryString.stringify(pagePrev),
       });
-      window.scrollTo({ top: 550 });
+      window.scrollTo({ top: 550, behavior: 'smooth' });
     }
   };
   const handlePageNext = () => {
@@ -68,7 +68,7 @@ function Pagination({ pagination }) {
         pathname: history.location.pathname,
         search: queryString.stringify(pagePrev),
       });
-      window.scrollTo({ top: 550 });
+      window.scrollTo({ top: 550, behavior: 'smooth' });
     }
   };
   return (
