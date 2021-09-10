@@ -326,6 +326,22 @@
   display: none;
 
 }
+.input-checkbox{
+  display: none;
+}
+.overlay-moblie{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  animation: fadeIn linear 0.3s;
+}
+.input-checkbox:checked ~ .overlay-moblie {
+  display: block;
+}
 .nav-mobile-icon{
   font-size: 5rem;
   color: white;
@@ -333,7 +349,60 @@
   top: 50%;
   transform: translateY(-50%);
 }
+.menu-mobile{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 320px;
+  max-width: 100%;
+  background-color: #fff;
+  transform: translateX(100%);
+  animation: transform linear 10s;
+}
+.input-checkbox:checked ~ .menu-mobile {
+  transform: translateX(0%);
+}
+.icon-close-mobile{
+  position: absolute;
+  top: 1vh;
+  right: 1vh;
+  font-size: 4rem;
+  color: #000;
+  z-index: 9999999999;
+}
+.menu-mobile-account{
 
+}
+.search-moblie{
+
+}
+.search-input-moblie{
+
+}
+.button-search-mobile{
+
+}
+.loggout-moblie{
+
+}
+.loggout-icon-moblie{
+
+}
+.loggout-title-moblie{
+  font-size: 2rem;
+  padding: 20px 20px;
+  color: var(--main-color);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* Tablet */
 @media (min-width: 46.25em) and (max-width: 82em){
   .header-item{

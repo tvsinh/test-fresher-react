@@ -3,10 +3,11 @@ import './style.css';
 import { useHistory } from 'react-router';
 import { BiSearchAlt } from 'react-icons/bi';
 import { IoIosArrowDown } from 'react-icons/io';
+import { IoCloseSharp } from 'react-icons/io5';
 import { FaCheck } from 'react-icons/fa';
 import { FaRegUser } from 'react-icons/fa';
 import { AiFillCaretDown } from 'react-icons/ai';
-import { TiThMenuOutline } from 'react-icons/ti';
+import { GiHamburgerMenu } from 'react-icons/gi';
 import { useDispatch } from 'react-redux';
 import { logout } from 'features/Auth/authSlice';
 
@@ -76,8 +77,26 @@ function Header(props) {
             </ul>
           </div>
         </div>
-        <div className="nav-mobile">
-          <TiThMenuOutline className="nav-mobile-icon" />
+        <label htmlFor="check-nav-moblie" className="nav-mobile">
+          <GiHamburgerMenu className="nav-mobile-icon" />
+        </label>
+        <input type="checkbox" name="" id="check-nav-moblie" className="input-checkbox" />
+        <label htmlFor="check-nav-moblie" className="overlay-moblie"></label>
+        <div className="menu-mobile">
+          <label htmlFor="check-nav-moblie">
+            <IoCloseSharp className="icon-close-mobile" />
+          </label>
+          <div className="menu-mobile-account"></div>
+          <div className="search-moblie">
+            <div className="search-input-moblie"></div>
+            <div className="button-search-mobile"></div>
+          </div>
+          <div className="loggout-moblie">
+            <div className="loggout-icon-moblie"></div>
+            <div className="loggout-title-moblie" onClick={handleLogOut}>
+              Log Out
+            </div>
+          </div>
         </div>
       </div>
     </div>

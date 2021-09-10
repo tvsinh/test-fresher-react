@@ -88,3 +88,13 @@
   transition: all ease .7s;
   transform: translateY(50px);
 }
+
+/* Tablet */
+@media (min-width: 46.25em) and (max-width: 61em){
+  .animal-info{
+    padding: 15px 10px 15px;
+  }
+  .animal-detail {
+  font-size: 1.4rem;
+  }
+}
