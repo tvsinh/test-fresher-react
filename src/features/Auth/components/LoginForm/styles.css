@@ -8,7 +8,7 @@
   height: 100vh;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
-  background-image: url(https://pet-shop-tvs.vercel.app/login-bg.png);
+  background-image: url(https://pet-shop-tvs.netlify.app/login-bg.png);
   background-size: cover;
 }
 

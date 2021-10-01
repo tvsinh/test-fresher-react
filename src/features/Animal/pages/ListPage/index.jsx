@@ -81,7 +81,7 @@ function ListPage() {
         />
         <div className="background-content-root">
           <div className="background-content">
-            <p className="content-title">Choose A Pet You Like Now</p>
+            <p className="content-title">Choose A Pet You Like Right Now</p>
             <p className="content-description">
               Get a quick look at pet's basic information by focus over it.
             </p>
