@@ -5,7 +5,7 @@
   --main-color: rgb(26, 148, 255);
   --hover-color: rgb(0, 85, 160);
   --border-color: #dbdbdb;
- 
+
 
   --header-height: 90px;
   /* --nav-height: 34px;
@@ -29,7 +29,7 @@
 }
 .header-logo{
   width: 247px;
-} 
+}
 
 .header-logo-img{
   position: relative;
